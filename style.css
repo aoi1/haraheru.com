@@ -1,0 +1,317 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #FAFAF8;
+  --ink: #1A1A1A;
+  --muted: #888;
+  --accent: #D97B5A;
+  --border: #E5E5E0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Noto Sans JP', 'Noto Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ─── HEADER ─── */
+header {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-name {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.lang-toggle {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 0.75rem;
+}
+
+.lang-toggle button {
+  background: none;
+  border: none;
+  padding: 4px 12px;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.75rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.lang-toggle button.active {
+  background: var(--ink);
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+nav a:hover { color: var(--ink); }
+
+.nav-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* ─── HERO ─── */
+.hero {
+  padding: 4rem 3rem 3rem;
+  max-width: 640px;
+}
+
+.hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.hero p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+/* ─── WORKS ─── */
+.works {
+  padding: 1.5rem 3rem 5rem;
+}
+
+.works-header {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2rem 1.5rem;
+}
+
+.book {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.book:hover .cover { opacity: 0.85; }
+.book:hover .book-title { color: var(--accent); }
+
+.cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--border);
+  border-radius: 3px;
+  margin-bottom: 0.7rem;
+  overflow: hidden;
+  transition: opacity 0.2s;
+  position: relative;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: #EEEEE9;
+}
+
+.cover-placeholder span {
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cover-placeholder .ph-icon {
+  font-size: 1.6rem;
+  opacity: 0.4;
+}
+
+.book-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.book-title {
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: color 0.15s;
+}
+
+.book-date {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+/* ─── PROFILE ─── */
+.profile {
+  padding: 3rem 3rem 1.5rem;
+}
+
+.profile-name {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4rem;
+}
+
+.profile-bio {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ─── TOP VISUAL ─── */
+.top-visual {
+  padding: 2rem 3rem;
+}
+
+.top-visual img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* ─── TALKS ─── */
+.talks {
+  padding: 1.5rem 3rem 5rem;
+}
+
+.talk-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.talk {
+  display: flex;
+  gap: 2rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.talk:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.talk-date {
+  flex-shrink: 0;
+  width: 5rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  padding-top: 0.15rem;
+}
+
+.talk-body {
+  flex: 1;
+}
+
+.talk-event {
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+
+.talk-title {
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.talk-title:hover { color: var(--accent); }
+
+/* ─── FOOTER ─── */
+footer {
+  padding: 2rem 3rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: var(--ink); }
+
+@media (max-width: 600px) {
+  header { padding: 1.2rem 1.5rem; }
+  nav { display: none; }
+  .hero { padding: 2.5rem 1.5rem 2rem; }
+  .works { padding: 1rem 1.5rem 3rem; }
+  .top-visual { padding: 1rem 1.5rem; }
+  .talks { padding: 1rem 1.5rem 3rem; }
+  .talk { gap: 1rem; }
+  .talk-date { width: 4rem; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem 1rem; }
+  footer { padding: 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+}

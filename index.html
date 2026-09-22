@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>おとうふ工房</title>
+<meta name="description" content="旅行エッセイ漫画とKubernetes・Vimなどの技術まんがを作っています。">
+<meta property="og:title" content="おとうふ工房">
+<meta property="og:description" content="旅行エッセイ漫画とKubernetes・Vimなどの技術まんがを作っています。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <span class="site-name" data-ja="おとうふ工房" data-en="Otofu-Kobo">おとうふ工房</span>
+  <div class="header-right">
+    <div class="lang-toggle">
+      <button id="btn-ja" class="active" onclick="setLang('ja')">JA</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <nav>
+      <a href="https://blux.booth.pm" target="_blank">Booth</a>
+      <a href="https://www.instagram.com/aoi_tofu" target="_blank" aria-label="Instagram"><svg class="nav-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+      <a href="https://x.com/_a0i" target="_blank" aria-label="X"><svg class="nav-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="top-visual">
+  <img src="top.png" alt="おとうふ工房">
+</section>
+
+<section class="profile">
+  <p class="works-header" data-ja="プロフィール" data-en="Profile">プロフィール</p>
+  <p class="profile-name" data-ja="あおい" data-en="Aoi">あおい</p>
+  <p class="profile-bio" data-ja="SRE / 趣味で漫画を描く" data-en="SRE / Drawing comics as a hobby">SRE / 趣味で漫画を描く</p>
+</section>
+
+<section class="talks">
+  <p class="works-header" data-ja="登壇履歴" data-en="Talks">登壇履歴</p>
+  <ul class="talk-list">
+
+    <li class="talk">
+      <time class="talk-date" datetime="2026">2026</time>
+      <div class="talk-body">
+        <p class="talk-event">KubeCon + CloudNativeCon Japan 2026</p>
+        <a class="talk-title" href="https://kubecon-cloudnativecon-japan-2026.sessionize.com/session/1228189" target="_blank" data-ja="Beyond Translation: The Journey of Building the Japanese Kubernetes SIG Docs Community" data-en="Beyond Translation: The Journey of Building the Japanese Kubernetes SIG Docs Community">Beyond Translation: The Journey of Building the Japanese Kubernetes SIG Docs Community</a>
+      </div>
+    </li>
+
+    <li class="talk">
+      <time class="talk-date" datetime="2026-03">2026.03</time>
+      <div class="talk-body">
+        <p class="talk-event">KubeCon + CloudNativeCon Europe 2026</p>
+        <a class="talk-title" href="https://kccnceu2026.sched.com/speaker/aoimotomura" target="_blank" data-ja="Hack Me If You Can: Learning Kubernetes Security Through a Role-Play Battle" data-en="Hack Me If You Can: Learning Kubernetes Security Through a Role-Play Battle">Hack Me If You Can: Learning Kubernetes Security Through a Role-Play Battle</a>
+      </div>
+    </li>
+
+    <li class="talk">
+      <time class="talk-date" datetime="2026-02">2026.02</time>
+      <div class="talk-body">
+        <p class="talk-event">Developers Summit 2026</p>
+        <a class="talk-title" href="https://event.shoeisha.jp/devsumi/20260218/session/6490" target="_blank" data-ja="同じお題をどう描く？ IT漫画家3人に学ぶ&quot;技術を伝える&quot;技術" data-en="How Do You Draw the Same Topic? Learning the &quot;Art of Communicating Tech&quot; from 3 IT Manga Artists">同じお題をどう描く？ IT漫画家3人に学ぶ"技術を伝える"技術</a>
+      </div>
+    </li>
+
+    <li class="talk">
+      <time class="talk-date" datetime="2025-06">2025.06</time>
+      <div class="talk-body">
+        <p class="talk-event">KubeCon + CloudNativeCon Japan 2025</p>
+        <a class="talk-title" href="https://events.linuxfoundation.org/archive/2025/kubecon-cloudnativecon-japan/program/schedule/" target="_blank" data-ja="The Grand Adventure of Production Apps: Build, Break, and Survive! ~ A Kawaii Manga Journey Through" data-en="The Grand Adventure of Production Apps: Build, Break, and Survive! ~ A Kawaii Manga Journey Through">The Grand Adventure of Production Apps: Build, Break, and Survive! ~ A Kawaii Manga Journey Through</a>
+      </div>
+    </li>
+
+    <li class="talk">
+      <time class="talk-date" datetime="2024-02">2024.02</time>
+      <div class="talk-body">
+        <p class="talk-event">Developers Summit 2024</p>
+        <a class="talk-title" href="https://event.shoeisha.jp/devsumi/20240215/session/4802" target="_blank" data-ja="Kubernetesは怖くない！開発者のためのインフラトラブルシューティング入門" data-en="Kubernetes Isn't Scary! An Intro to Infrastructure Troubleshooting for Developers">Kubernetesは怖くない！開発者のためのインフラトラブルシューティング入門</a>
+      </div>
+    </li>
+
+  </ul>
+</section>
+
+<footer>
+  <span>© おとうふ工房</span>
+  <div class="footer-links">
+    <a href="https://blux.booth.pm" target="_blank">Booth</a>
+    <a href="https://www.instagram.com/aoi_tofu" target="_blank" aria-label="Instagram"><svg class="nav-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+    <a href="https://x.com/_a0i" target="_blank" aria-label="X"><svg class="nav-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+    <a href="https://dev.to/" target="_blank">dev.to</a>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-ja][data-en]').forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+    document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  }
+</script>
+
+</body>
+</html>
