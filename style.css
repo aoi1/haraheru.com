@@ -226,6 +226,19 @@ nav a:hover { color: var(--ink); }
   border-radius: 4px;
 }
 
+/* ─── WORKS ─── */
+.works {
+  padding: 1.5rem 3rem 3rem;
+}
+
+.works-subheader {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin: 2rem 0 0.75rem;
+}
+
 /* ─── TALKS ─── */
 .talks {
   padding: 1.5rem 3rem 5rem;
